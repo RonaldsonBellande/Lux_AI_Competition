@@ -14,7 +14,10 @@ class luxvectorEnv(gym.Wrapper):
         return self.get_array_worker_cities()
         
     def step(self, action):
-        
+        """
+        Here we should get the list of action => and apply it to everything
+        """
+
         next_state, reward, done, info = self.env.step(action)
         next_state = self.get_array_worker_cities()
         
